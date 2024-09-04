@@ -1,0 +1,247 @@
+/* #region general Settings */
+
+* {
+    box-sizing: border-box;
+    color: rgb(3, 3, 3);
+}
+
+body {
+    margin: 0;
+}
+
+
+#hideButton {
+    position: fixed;
+    left: 4px;
+    top: 3px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+}
+
+
+#hideButton>svg{
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+#wraper.hideSidebar #hideButton>svg{
+    transform: rotate(0deg);
+}
+
+
+#hideButton>svg:hover{
+    background: black;
+}
+#hideButton>svg:hover path{
+    fill: white;
+}
+
+.wrapper {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.wrapper>div {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* #endregion */
+
+
+
+
+
+/* #region form Section */
+#wraper.hideSidebar>.formSection {
+    display: none;
+}
+
+
+.formSection {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.statusRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.statusOfSlot {
+    margin-bottom: 50px;
+    background-color: greenyellow;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.formRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#source {
+    color: #000000;
+    width: 50%;
+  }
+
+.formLabel {
+    margin-right: 10px;
+    color: aliceblue;
+}
+
+.formInput {
+    width: 50%;
+    color: #030303;
+}
+
+.saveButton {
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    font: inherit;
+    outline: inherit;
+}
+
+.saveButton:not(:disabled) {
+    cursor: pointer;
+}
+
+.IDLE{
+    background-color: black;
+}
+.IDLE>.timer{
+    display: none;
+}
+
+.BAKING{
+    background-color: yellow;
+}
+
+.READY{
+    background-color: green;
+}
+
+.OVERBAKED{
+    background-color: red;
+}
+
+.selected{
+    border: 5px solid cornflowerblue !important;
+}
+
+.exportSection{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#exportButton{
+    color: black;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* #endregion */
+
+/*#region oven Section */
+.ovenSection {
+    flex-grow: 2;
+    overflow-x: auto; /* Adicione rolagem vertical quando necessário */
+}
+
+
+.ovenSctructure {
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-size: 30px;
+    font-family: monospace;
+    margin: 5px;
+    border: 1px dashed gray;
+    height: 50px;
+    border-radius: 5px;
+}
+
+   
+
+.verticalSection {
+    border-radius: 5px;
+    display: flex;
+    flex-grow: 20;   
+    color: #ffffff;
+}
+
+/* Posicionamento dos elementos na div do slot */
+.vSlot {
+     display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    height: auto; /* Ajuste conforme necessário */
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Estilo para o timer (tempo) na parte superior */
+.timer {
+    
+    order: 2;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Estilo para o número de série do Board com orientação vertical */
+.boardSN-vertical {
+    order: 1;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: center;
+    font-size: 14px;
+ 
+    color:black;
+}
+
+/* Estilo para o nome do slot na parte inferior */
+.nameSlot {
+    order: 3;
+    text-align: center;
+    font-size: 16px;
+    color:black;
+}

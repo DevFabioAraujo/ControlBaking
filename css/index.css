@@ -1,0 +1,41 @@
+body {
+    background: #5f5e5e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.button {
+    width: 170px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #eb8e03;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.button:hover {
+    background-color: #f1d194f3;
+}
+
+
+.logo {
+    width: 200px; /* Defina a largura desejada para o logo */
+    margin-bottom: 20px;   
+    color: white;
+
+}
+h1 {
+    width: 200px; 
+    margin-top: 250px;
+    margin-bottom: 80px;   
+    color: white;
+    text-align: center;
+}
